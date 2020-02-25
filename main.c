@@ -54,10 +54,32 @@ int day_of_the_year(int day, int month, int year)
 
 }
 
-/*void input_date(int &day, int &month, int &year)
+void input_date(int *pointerday, int *pointermonth, int *pointeryear)
 {
+	do {
 
-}*/
+		printf("Geben sie den Tag ein");
+		scanf("%i", &*pointerday);
+		fflush(stdin);
+		printf("Geben sie den Monat ein");
+		scanf("%i", &*pointermonth);
+		fflush(stdin);
+		printf("Geben sie das Jahr ein");
+		scanf("%i", &*pointeryear);
+		fflush(stdin);
+
+
+
+
+
+
+
+
+
+
+
+	} while (!(exist_date(*pointerday, *pointermonth, *pointeryear)));
+}
 
 int get_days_for_month(int month, int year)
 {
@@ -87,8 +109,9 @@ int exist_date(int day, int month, int year)
 
     return 1;
 }
-int main()
-{
-    printf("%i",day_of_the_year(31,12,2018));
+int main(){
+    int day,month,year;
+    input_date(&day, &month, &year);
+	printf("%i",day_of_the_year(day,month,year));
     return 0;
 }
