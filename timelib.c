@@ -104,3 +104,44 @@ int exist_date(int day, int month, int year)
 
     return 1;
 }
+int wday(int year, int month, int day)
+{
+	int adjustment, mm, yy;
+
+	adjustment = (14 - month) / 12;
+	mm = month + 12 * adjustment - 2;
+	yy = year - adjustment;
+	return (day + (13 * mm - 1) / 5 +
+		yy + yy / 4 - yy / 100 + yy / 400) % 7;
+}
+void ausgabeWochentag(int year, int month,int day){
+    if (wday(year,month,day)==0){
+
+        printf("Es ist ein Sonntag\n");
+    }
+    else if (wday(year,month,day)==1){
+
+        printf("Es ist ein Montag\n");
+    }
+    else if (wday(year,month,day)==2){
+
+        printf("Es ist ein Dienstag\n");
+    }
+    else if (wday(year,month,day)==1){
+
+        printf("Es ist ein Mittwoch\n");
+    }
+    else if (wday(year,month,day)==3){
+
+        printf("Es ist ein Donnerstag\n");
+    }
+    else if (wday(year,month,day)==4){
+
+        printf("Es ist ein Freitag\n");
+    }
+    else if (wday(year,month,day)==5){
+
+        printf("Es ist ein Samstag\n");
+    }
+
+}

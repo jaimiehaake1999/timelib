@@ -12,6 +12,8 @@
 int main(){
     int day,month,year;
     input_date(&day, &month, &year);
-	printf("Es ist der %i Tag im Jahr %i",day_of_the_year(day,month,year),year);
+	printf("Es ist der %i Tag\n"),day_of_the_year(day,month,year);
+	ausgabeWochentag(year,month,day);
     return 0;
+    fflush(stdin);
 }
