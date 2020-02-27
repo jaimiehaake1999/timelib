@@ -12,6 +12,6 @@
 int main(){
     int day,month,year;
     input_date(&day, &month, &year);
-	printf("%i",day_of_the_year(day,month,year));
+	printf("Es ist der %i Tag im Jahr %i",day_of_the_year(day,month,year),year);
     return 0;
 }

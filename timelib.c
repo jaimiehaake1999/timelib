@@ -53,13 +53,13 @@ void input_date(int *pointerday, int *pointermonth, int *pointeryear)
 {
 	do {
 
-		printf("Geben sie den Tag ein");
+		printf("Geben sie den Tag ein :\n");
 		scanf("%i", &*pointerday);
 		fflush(stdin);
-		printf("Geben sie den Monat ein");
+		printf("Geben sie den Monat ein :\n");
 		scanf("%i", &*pointermonth);
 		fflush(stdin);
-		printf("Geben sie das Jahr ein");
+		printf("Geben sie das Jahr ein :\n");
 		scanf("%i", &*pointeryear);
 		fflush(stdin);
 
